@@ -1,0 +1,33 @@
+spring:
+  cache:
+    type: redis
+  datasource:
+    url: jdbc:mysql://localhost:13306/interview_mall
+    password: root
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+
+logging:
+  level:
+    jdbc:
+      sqlonly: info
+      resultset: off
+      sqltiming: off
+      audit: off
+      resultsettable: info
+      connection: off
+
+log4jdbc:
+  auto:
+    load:
+      popular:
+        drivers: false
+
+
+server:
+  port: 9200
